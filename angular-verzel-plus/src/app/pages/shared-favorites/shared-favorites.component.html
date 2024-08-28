@@ -1,0 +1,52 @@
+<div class="container" *ngIf="!isLoading; else loading">
+  <div class="title__container">
+    <h1>Confira a Lista de Favoritos!</h1>
+    <p>
+      Olá! Alguém compartilhou com você uma lista de filmes favoritos. Aproveite
+      para conferir os filmes que estão na lista!
+    </p>
+  </div>
+
+  <ng-container *ngIf="favoriteMovies.length; else noFavorites">
+    <div *ngIf="favoriteMovies.length > 0" class="favorite-movie-list">
+      <div *ngFor="let movie of favoriteMovies" class="movie-card">
+        <div class="movie-image">
+          <img
+            [src]="movieService.getPosterUrl(movie.posterPath)"
+            alt="Poster do filme"
+          />
+        </div>
+        <div class="movie-info">
+          <div class="movie-info-header">
+            <h3 class="movie-title">{{ movie.title }}</h3>
+          </div>
+          <p class="movie-year">Ano: {{ movie.releaseDate | date : "yyyy" }}</p>
+          <p class="movie-overview">{{ movie.overview }}</p>
+          <p class="movie-rating">
+            Nota:
+            <span [ngClass]="movieService.getRatingClass(movie.voteAverage)">
+              {{ movie.voteAverage | number : "1.0-0" }}
+              <i
+                class="pi pi-star-fill"
+                [style.color]="movieService.getRatingColor(movie.voteAverage)"
+              ></i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #loading>
+  <div class="container">
+    <span class="loader"></span>
+  </div>
+</ng-template>
+
+<ng-template #noFavorites>
+  <div class="empty-message">
+    A lista de favoritos está vazia. Parece que não há filmes na lista para
+    mostrar!
+  </div>
+</ng-template>

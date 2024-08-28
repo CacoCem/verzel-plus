@@ -1,0 +1,9 @@
+.page-wrapper {
+    min-height: 100vh; /* ajuste para que o wrapper ocupe toda a altura da página */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    margin-top: auto; /* faz o footer ficar no fim da página */
+  }
