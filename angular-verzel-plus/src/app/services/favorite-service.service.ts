@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class FavoriteService {
-  private apiUrl = 'http://localhost:8080';
+  private apiUrl = 'https://spring-verzel-plus.onrender.com';
 
   constructor(private http: HttpClient) {}
 
