@@ -15,7 +15,7 @@ import spring.verzel_plus.model.ResponseMsg;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://angular-verzel-plus-gw5m.vercel.app")
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 public class FavoriteController {
 
