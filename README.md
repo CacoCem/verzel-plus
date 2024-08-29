@@ -7,7 +7,6 @@ Aplicação web que lista filmes e permite que os usuários favoritem e comparti
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Executar o Projeto](#como-executar-o-projeto)
-- [API do TMDB](#api-do-tmdb)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Deploy](#deploy)
 - [Endpoints da API](#endpoints-da-api)
@@ -75,9 +74,18 @@ A aplicação permite que os usuários compartilhem suas listas de filmes favori
 
 ## **Deploy**
 
-### **Frontend (Vercel)**
+### **Front-end (Vercel)**
 
-A aplicação frontend é hospedada no Vercel, acesse a aplicação em `https://angular-verzel-plus-gw5m.vercel.app/`
+A aplicação front-end é hospedada no Vercel, acesse a aplicação em `https://angular-verzel-plus-gw5m.vercel.app/`
+
+### **Back-end (Render)**
+
+A aplicação back-end é hospedada no Render, acesse a aplicação em `https://angular-verzel-plus-gw5m.vercel.app/`
+
+### **Observações Importantes sobre o Back-end**
+
+O back-end da aplicação está hospedado em um serviço de hospedagem gratuito. Como parte das limitações deste plano, o servidor pode ser desligado automaticamente após períodos de inatividade. Isso significa que, ao tentar acessar a aplicação após um período em que o servidor esteve inativo, pode haver um atraso de 1 a 2 minutos enquanto o servidor é reativado. Durante esse tempo, a aplicação pode parecer não responsiva, mas basta aguardar que o servidor estará funcionando novamente em breve.
+
 
 ## **Endpoints da API**
 
