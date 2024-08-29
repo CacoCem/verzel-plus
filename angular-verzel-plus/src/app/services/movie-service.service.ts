@@ -6,9 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class MovieService {
-  private apiUrl = 'https://spring-verzel-plus.onrender.com/movies';
+  private apiUrl = 'http://localhost:8080/movies';
 
-  // Declare a property 'movies' to hold the list of movies
   movies: any[] = [];
 
   constructor(private http: HttpClient) {}
