@@ -80,7 +80,7 @@ A aplicação front-end é hospedada no Vercel, acesse a aplicação em `https:/
 
 ### **Back-end (Render)**
 
-A aplicação back-end é hospedada no Render, acesse a aplicação em `https://angular-verzel-plus-gw5m.vercel.app/`
+A aplicação back-end é hospedada no Render.
 
 ### **Observações Importantes sobre o Back-end**
 
